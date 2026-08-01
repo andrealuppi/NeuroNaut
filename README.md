@@ -520,7 +520,7 @@ It will produce figures showing empirical correlations between pairs of LLM and 
 To use the spin-test null model, you will need to include in your MATLAB path the [ENIGMA Toolbox](https://github.com/MICA-MNI/ENIGMA.git) by Lariviere et al. (2021) _Nature Methods_.
 
 `meta_analytic_maps/`: this directory contains the following NeuroSynth and NeuroQuery meta-analytic maps: 
-- `NeuroSynth_BeamOntology.mat` and `NeuroQuery_BeamOntology.mat` provide meta-analytic brain maps for 8 fundamental domains of cognition (as defined in Beam et al. (2021) _Nature Neuroscience), in the Desikan-Killiany cortical atlas;
+- `NeuroSynth_BeamOntology.mat` and `NeuroQuery_BeamOntology.mat` provide meta-analytic brain maps for 8 fundamental domains of cognition (as defined in Beam et al. (2021) _Nature Neuroscience_), in the Desikan-Killiany cortical atlas;
 - `NeuroSynth_123_BeyondOntology.mat` provides additional meta-analytic brain maps that, together with those in `NeuroSynth_BeamOntology.mat`, encompass a widely used set of 123 terms from the cognitive neuroscience literature;
 - `NeuroQuery_SanityCheck.mat` and `NeuroSynth_SanityCheck_Refined.mat` - alternative versions of some of the 123 NeuroSynth maps: either from a different meta-analytic engine, or from refining the abstract selection; 
 - `NeuroSynth_Manipulation_Refined.mat` - the NeuroSynth brain map for _manipulation_, obtained after refining the abstract selection with [NeuroSieve](https://github.com/netneurolab/neurosieve).
