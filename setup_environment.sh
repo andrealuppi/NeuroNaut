@@ -3,7 +3,7 @@
 # This script creates a conda environment with all necessary dependencies
 
 # Set environment name
-ENV_NAME="llm_neuro"
+ENV_NAME="neuronaut"
 
 # Check if conda is installed
 if ! command -v conda &> /dev/null; then
