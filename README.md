@@ -31,20 +31,20 @@ The framework also supports:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/andrealuppi/neuroLLM.git
-   cd neuroLLM
+   git clone https://github.com/andrealuppi/NeuroNaut.git
+   cd NeuroNaut
    ```
 
 2. Run the setup script (creates conda environment, installs dependencies, generates config templates):
    ```bash
    bash setup_environment.sh
-   conda activate llm_neuro
+   conda activate neuronaut
    ```
 
    Or manually:
    ```bash
-   conda create -n llm_neuro python=3.12
-   conda activate llm_neuro
+   conda create -n neuronaut python=3.12
+   conda activate neuronaut
    conda install -c conda-forge pandas numpy matplotlib seaborn scikit-learn
    pip install openai requests python-dotenv
    # Only needed if using local embeddings (--embedding-provider local):
@@ -316,7 +316,7 @@ python main.py rank-pairs --atlas-name DesikanKilliany68 --species human \
 Use of local LLMs is also supported. Using a local LLM can be advantageous to avoid the need for an API key and associated costs, as well as giving users more control without dependence on third-party AI companies. Local models can also be fine-tuned by the user if desired. 
 Note that to run on a personal laptop, many LLMs may need quantization to reduce their size. 
 
-To use a desired local model, create a `config` folder in `neuroLLM`, and within it, create `local_models.json` structured as follows: 
+To use a desired local model, create a `config` folder in `NeuroNaut`, and within it, create `local_models.json` structured as follows: 
 
 ```json
 {
