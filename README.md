@@ -1,7 +1,7 @@
 # NeuroNaut: Mapping Brain Functions Across Species with Large Language Models
 
 <p align="center">
-  <img src="assets/NeuroNaut_logo.png" alt="NeuroNaut logo" width="300">
+  <img src="images/NeuroNaut_logo.png" alt="NeuroNaut logo" width="300">
 </p>
 
 A framework for using pre-trained Large Language Models as artificial neuroscience experts to map cognitive functions to brain regions across species.
