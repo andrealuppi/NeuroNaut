@@ -1,8 +1,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/neuronaut_logo_dark.png">
-    <img src="assets/neuronaut_logo.png" alt="NeuroNaut logo" width="260">
+    <source media="(prefers-color-scheme: dark)" srcset="images/neuronaut_logo_dark.png">
+    <img src="images/neuronaut_logo.png" alt="NeuroNaut logo" width="260">
   </picture>
 </p>
 
@@ -10,7 +10,6 @@
 
 <p align="center">
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.12%2B-blue.svg" alt="Python 3.12+"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/andrealuppi/NeuroNaut" alt="License"></a>
   <a href="https://www.biorxiv.org/content/10.64898/2025.12.01.691701v1"><img src="https://img.shields.io/badge/paper-manuscript-B31B1B.svg" alt="Paper"></a>
 </p>
 
