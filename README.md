@@ -2,7 +2,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="images/neuronaut_logo_dark.png">
-    <img src="images/neuronaut_logo.png" alt="NeuroNaut logo" width="260">
+    <img src="images/neuronaut_logo_light.png" alt="NeuroNaut logo" width="260">
   </picture>
 </p>
 
