@@ -5,7 +5,6 @@ from types import SimpleNamespace
 from argument_parser import parse_args
 
 import numpy as np
-import torch
 
 from dotenv import load_dotenv
 
@@ -112,10 +111,14 @@ def main():
     # Set global seeds for reproducibility
     random.seed(42)
     np.random.seed(42)
-    torch.manual_seed(42)
-    torch.cuda.manual_seed_all(42)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
+    try:
+        import torch
+        torch.manual_seed(42)
+        torch.cuda.manual_seed_all(42)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+    except ImportError:
+        pass
 
     # Load environment variables from .env file
     load_dotenv(DEFAULT_PATHS["env_file"])

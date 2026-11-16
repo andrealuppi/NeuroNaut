@@ -1,17 +1,10 @@
 import os
 import time
-import torch
 import random
 
 from typing import Dict, List, Callable, Any
 
 import openai
-
-from huggingface_hub import model_info
-from huggingface_hub.utils import GatedRepoError, RepositoryNotFoundError
-from peft import PeftModel
-from sentence_transformers import SentenceTransformer
-from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from utils.misc.logging_setup import logger
 from utils.misc.variables import (
@@ -179,6 +172,8 @@ class APIClientManager:
             model = obj["model"]
             tokenizer = obj["tokenizer"]
 
+            import torch
+
             inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
             with torch.no_grad():
@@ -286,6 +281,8 @@ class APIClientManager:
         Weights are downloaded on first use and cached locally in
         ~/.cache/huggingface/hub/ by the huggingface_hub library
         """
+        from sentence_transformers import SentenceTransformer
+
         self.clients["local_embeddings"] = SentenceTransformer(
             "BAAI/bge-large-en-v1.5"
         )
@@ -298,6 +295,9 @@ class APIClientManager:
         Validate HF_TOKEN exists and has access to the gated BrainGPT base
         model on Hugging Face. Must be called before _init_braingpt()
         """
+        from huggingface_hub import model_info
+        from huggingface_hub.utils import GatedRepoError, RepositoryNotFoundError
+
         # Get HF token
         hf_token = os.environ.get("HF_TOKEN")
         if not hf_token:
