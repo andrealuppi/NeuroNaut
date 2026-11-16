@@ -62,7 +62,9 @@ The framework also supports:
    conda activate neuronaut
    conda install -c conda-forge pandas numpy matplotlib seaborn scikit-learn
    pip install openai requests python-dotenv
-   # Only needed if using local embeddings (--embedding-provider local):
+   # Only needed for local/... models (Apple Silicon Macs only):
+   pip install mlx-lm
+   # Only needed for local embeddings (--embedding-provider local):
    pip install sentence-transformers
    ```
 

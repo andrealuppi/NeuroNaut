@@ -45,9 +45,15 @@ conda install -y -c conda-forge pandas numpy matplotlib seaborn scikit-learn
 echo "Installing pip packages..."
 pip install openai requests python-dotenv
 
-# Install BrainGPT dependencies (only needed if using BrainGPT model)
-echo "Installing BrainGPT dependencies (peft, transformers, torch)..."
-pip install peft transformers torch
+# Optional: local models (only needed for local/... models; Apple Silicon only)
+if [ "$(uname -s)" = "Darwin" ] && [ "$(uname -m)" = "arm64" ]; then
+    echo "Installing local model dependency (mlx-lm)..."
+    pip install mlx-lm
+fi
+
+# Optional: local embeddings (only needed for --embedding-provider local)
+echo "Installing local embeddings dependency (sentence-transformers)..."
+pip install sentence-transformers
 
 # Create .env file if it doesn't exist
 if [ ! -f .env ]; then
