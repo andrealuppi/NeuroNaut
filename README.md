@@ -17,7 +17,7 @@
   A framework for using pre-trained Large Language Models as artificial neuroscience experts to map cognitive functions to brain regions across species.
 </p>
 
-This framework supports the results of the manuscript _Cognitive cartography of mammalian brains using meta-analysis of AI experts_ by Andrea Luppi et al.
+This framework supports the results of the manuscript _Cognitive cartography of mammalian brains using meta-analysis of AI experts_ by Andrea Luppi et al. ([preprint](https://www.biorxiv.org/content/10.64898/2025.12.01.691701v2))
 
 ## Overview
 
@@ -79,6 +79,7 @@ The framework also supports:
    | `OPENROUTER_API_KEY` | Yes (for cloud models) | Routes all LLM queries | [openrouter.ai/keys](https://openrouter.ai/keys) |
    | `OPENAI_API_KEY` | Only for `top-functions` with `--embedding-provider openai` (default) | Generates text embeddings via `text-embedding-3-large` | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
 
+Typical install time is around 5 minutes. 
 
 ### Atlas Files
 
@@ -127,7 +128,7 @@ python main.py top-functions --atlas-name DesikanKilliany68 --species human
 ```
 
 #### `query-functions` -- Region-Function Association Scores
-Calculates probabilities of specific functions being associated with regions:
+Calculates probabilities of specific functions being associated with regions (expected duration depends of selected model and number of regions; typically in the order of minutes):
 
 ```bash
 python main.py query-functions --atlas-name DesikanKilliany68 --species human \
@@ -135,7 +136,7 @@ python main.py query-functions --atlas-name DesikanKilliany68 --species human \
 ```
 
 #### `rank-pairs` -- Pairwise Region Ranking
-Ranks which of two brain regions is more relevant to a specific function (ties not allowed), either for a user-specified pair, or for all possible pairs:
+Ranks which of two brain regions is more relevant to a specific function (ties not allowed), either for a user-specified pair, or for all possible pairs (note, this function takes longer than query-functions):
 
 ```bash
 # Rank specific pairs for specific functions
